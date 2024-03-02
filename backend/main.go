@@ -29,11 +29,9 @@ func setupRoutes() {
 	http.HandleFunc("/ws", func(w http.ResponseWriter, r *http.Request) {
 		serverWs(pool, w, r)
 	})
-
 }
 
 func main() {
-
 	setupRoutes()
-	http.ListenAndServe(":9000", nil)
+	http.ListenAndServe(":8123", nil)
 }
